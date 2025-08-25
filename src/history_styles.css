@@ -1,0 +1,105 @@
+:root {
+    --font-main: 'Inter', sans-serif;
+    --color-background: #0f172a;
+    --color-item-bg: #1e293b;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-accent: #818cf8;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-main);
+    padding: 1.5em 0.5em 1em 1.5em;
+    overflow: hidden; /* Evitamos que el body principal genere un scroll */
+  }
+  
+  .history-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 1.5em; /* Aumentamos el padding para que el texto no se pegue al borde */
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 1.8em;
+  }
+  
+  #export-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #16a34a, #1D6F42);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #export-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+  }
+  
+  #history-list {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto; /* Mantenemos el scroll SÓLO para esta lista */
+    padding-right: 1.5em; /* Aumentamos el padding para que el texto no se pegue al borde */
+  }
+  
+  #history-list li {
+    background-color: var(--color-item-bg);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  #history-list li strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: var(--color-text-primary);
+  }
+  
+  #history-list li p {
+    margin: 5px 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9em;
+    word-wrap: break-word;
+  }
+  
+  #history-list li p.comment {
+    font-style: italic;
+    opacity: 0.8;
+    border-top: 1px dashed #334155;
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+  
+  #history-list li small {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-top: 10px;
+  }
+  
+  /* --- REGLA GLOBAL PARA OCULTAR TODAS LAS BARRAS DE SCROLL --- */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }

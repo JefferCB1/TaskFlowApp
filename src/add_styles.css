@@ -1,0 +1,78 @@
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-background: #0f172a; /* Mantenemos la paleta de colores */
+  --color-display-bg: #334155;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #818cf8;
+}
+
+body {
+  margin: 0;
+  /* ¡AÑADIMOS EL MISMO FONDO QUE LA VENTANA PRINCIPAL! */
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(at 5% 10%, hsla(240, 60%, 30%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 95% 90%, hsla(240, 70%, 25%, 0.3) 0px, transparent 50%);
+
+  color: var(--color-text-primary);
+  font-family: var(--font-main); /* Aplicamos la fuente a todo el body */
+  padding: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: -5px;
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+}
+
+input[type="text"],
+textarea {
+  width: 95%;
+  background-color: var(--color-display-bg);
+  color: white;
+  border: 1px solid #475569;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1em;
+  font-family: var(--font-main); /* Aseguramos la fuente en los inputs */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+  border: none;
+  padding: 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #11225c, #3954e5);
+  transition: all 0.2s ease-in-out;
+  font-family: var(--font-main); /* ¡APLICAMOS LA FUENTE AL BOTÓN! */
+}
+
+button:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}

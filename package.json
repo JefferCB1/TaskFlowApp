@@ -1,0 +1,24 @@
+
+{
+  "name": "taskflowapp",
+  "version": "1.0.0",
+  "description": "Tu gestor de tareas personal.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Tu Nombre",
+    "email": "tu@email.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "xlsx": "^0.18.5"
+  }
+}

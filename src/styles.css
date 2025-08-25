@@ -1,0 +1,123 @@
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-background: #0f172a;
+  --color-container-bg: #1e293b;
+  --color-display-bg: #334155;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #818cf8;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(at 5% 10%, hsla(240, 60%, 30%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 95% 90%, hsla(240, 70%, 25%, 0.3) 0px, transparent 50%);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1, h2, h3, p {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 360px;
+  background-color: var(--color-container-bg);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.8em;
+}
+h2 {
+  text-align: center;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+.task-display {
+  background-color: var(--color-display-bg);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  min-height: 80px;
+  word-wrap: break-word;
+}
+.task-display h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+.task-display p {
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+}
+
+/* ================================================= */
+/* --- SECCIÓN DE ESTILOS PARA LOS BOTONES --- */
+/* ================================================= */
+
+.all-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; 
+    margin-top: 25px;
+    
+    /* ¡LA CORRECCIÓN! */
+    max-width: 130px; /* Ancho máximo para la parrilla */
+    margin-left: auto;  /* Centrado automático */
+    margin-right: auto; /* Centrado automático */
+}
+
+button {
+  border: none;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: white;
+  background: linear-gradient(135deg, #11225c, #3954e5);
+}
+
+button svg {
+    width: 22px;
+    height: 22px;
+}
+
+button:disabled {
+  background: #334155 !important;
+  color: #64748b !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+button:hover:not(:disabled) {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
